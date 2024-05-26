@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<title>Dipendenti</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    
+
+    <script src="/javascript/navbar.js"></script>
+
+
+    <div class="box-body">
+		
+        <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+
+    </div>
+
+</body>
+</html>
