@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Knowledge Base</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header style="background-image: url('header-bg.jpg');">
+        <div class="container">
+            <div class="logo">
+                <h1>POSD System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <h2 class="hero-title">Base di Conoscenza Privacy</h2>
+            <p class="hero-description">Benvenuti nella nostra applicazione web dedicata alla Privacy Knowledge Base! Qui troverete tutto ciò di cui avete bisogno per integrare gli elementi fondamentali della privacy con il mapping esistente.</p>
+             <a href="/services" class="btn">Scopri di più</a>
+        </div>
+    </section>
+	
+
+<!-- Sezione "Chi Siamo" -->
+<section id="about">
+    <div class="container">
+        <h2>Chi Siamo</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Siamo un team appassionato e dedicato che si impegna a garantire la privacy e la sicurezza nei progetti informatici.</p>
+                <p>Il nostro obiettivo è assistere sviluppatori e aziende nell'implementazione delle best practices del GDPR, rendendo la privacy by design una parte integrante di ogni prodotto e servizio.</p>
+                <p>Scopri di più sul nostro team altamente qualificato e sulle soluzioni personalizzate che possiamo offrirti.</p>
+                <a href="/team" class="btn">Il nostro Team</a>
+            </div>
+            <div class="about-image">
+                <img src="Image/about-image.jpg" alt="Chi Siamo">
+            </div>
+        </div>
+    </div>
+    <div class="scroll-down">
+        <a href="/team" aria-label="Scorri verso il basso"><i class="fas fa-chevron-down"></i></a>
+    </div>
+</section>
+
+
+<!-- Sezione "Servizi" -->
+<section id="services">
+    <div class="container">
+        <h2>Servizi</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Conformità al GDPR</h3>
+                <p>Assistenza nella definizione di processi conformi al Regolamento Generale sulla Protezione dei Dati.</p>
+                <button class="modal-btn" data-modal-target="/gdpr-modal">Scopri di più</button>
+            </div>
+            <div class="service">
+                <h3>Pattern di Sicurezza</h3>
+                <p>Implementazione di pattern di sicurezza per proteggere i dati sensibili.</p>
+                <button class="modal-btn" data-modal-target="/security-modal">Scopri di più</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Aggiunta della sezione "Team" -->
+<section id="team">
+    <div class="container">
+        <h2>Il Nostro Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="Image/team-member1.jpg" alt="Membro del Team 1">
+                <h3>Croce Laura</h3>
+            </div>
+            <div class="team-member">
+                <img src="Image/team-member2.jpg" alt="Membro del Team 2">
+                <h3>Eugenio Nicola Verrascina</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

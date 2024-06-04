@@ -1,0 +1,499 @@
+/* Stili globali */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-image: url('../Image/sfondo-sfocato.jpg'); /* Aggiungiamo l'immagine di sfondo sfocata */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px); /* Utilizziamo backdrop-filter per aggiungere l'effetto di sfocatura */
+    -webkit-backdrop-filter: blur(10px); /* Supporto per browser WebKit */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInDown 0.5s ease; /* Animazione di fade-in al caricamento della pagina */
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f00;
+}
+
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 0.8em;
+}
+
+/* Stile per la sezione "Chi siamo" */
+#about {
+    position: relative;
+    padding: 150px 0; /* Aumentiamo il padding verticale per rendere la sezione più grande */
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#about h2 {
+    font-size: 3em; /* Aumentiamo la dimensione del titolo */
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between; /* Mette spazio tra l'immagine e il testo */
+    align-items: center; /* Centra verticalmente il contenuto */
+}
+
+.about-text {
+    flex: 1; /* Flessibile per adattarsi all'immagine */
+    padding-right: 20px; /* Aggiunge spazio tra il testo e l'immagine */
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text .btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.about-text .btn:hover {
+    background: #555;
+}
+
+.about-image {
+    flex: 1; /* Flessibile per adattarsi all'immagine */
+    max-width: 50%; /* Limita la larghezza dell'immagine */
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Stile per la sezione "Team" */
+#team {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+#team h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap; /* Permette ai membri del team di andare a capo quando non c'è abbastanza spazio */
+    justify-content: space-between; /* Distribuisce uniformemente i membri del team lungo la riga */
+}
+
+.team-member {
+    width: calc(33.33% - 40px); /* Larghezza di ogni membro del team (33.33% - margine) */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px; /* Spazio inferiore tra i membri del team */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+.team-member .modal-btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.team-member .modal-btn:hover {
+    background: #555;
+}
+
+
+
+
+/* Aggiunta di animazioni generiche */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Aggiungiamo un po' di trasparenza per rendere il background leggermente visibile */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInDown 0.5s ease; /* Animazione di fade-in al caricamento della pagina */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') no-repeat center center/cover; /* Sfondo con effetto di sovrapposizione */
+    animation: fadeInUp 1s ease; /* Animazione di fade-in al caricamento della pagina */
+}
+
+/* Aggiungiamo effetto parallasse al background del hero */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    z-index: -1;
+    animation: scaleHero 60s infinite linear; /* Animazione per il movimento del background */
+}
+
+@keyframes scaleHero {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Aggiungiamo un effetto di hover ai pulsanti */
+.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+    transform: translateY(-2px); /* Effetto di lieve sollevamento */
+}
+/* Aggiungiamo una transizione fluida per il cambio di colore dei link nel menu */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transizione fluida per il cambio di colore */
+}
+
+nav ul li a:hover {
+    color: #f00; /* Cambia il colore del link al passaggio del mouse */
+}
+
+/* Modifichiamo lo stile del footer per renderlo più elegante */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Per posizionare l'elemento figlio in modo assoluto */
+}
+
+.footer-text {
+    font-size: 0.9em;
+}
+
+/* Aggiungiamo un effetto di fade-in al footer */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5)); /* Gradient per l'effetto di fade-in */
+    z-index: -1; /* Assicura che l'elemento sia dietro il testo */
+    opacity: 0; /* Parte inizialmente invisibile */
+    transition: opacity 0.5s ease; /* Effetto di transizione per il cambio di opacità */
+}
+
+footer:hover::before {
+    opacity: 1; /* Al passaggio del mouse, l'elemento diventa visibile */
+}
+/* Aggiungiamo uno stile più fluido per il background */
+#about {
+    position: relative;
+    padding: 120px 0;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* Stile per la sezione "Team" */
+#team {
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Sfondo simile alla sezione "Chi siamo" */
+    color: #fff; /* Testo bianco */
+}
+
+#team h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    width: calc(33.33% - 40px); /* Larghezza di ogni membro del team */
+    flex: 0 0 auto; /* Impedisci ai membri del team di espandersi */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Sfondo bianco per ogni membro del team */
+    color: #333; /* Testo scuro per una migliore leggibilità */
+	text-align: center; /* Allineamento al centro dei contenuti */
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+.team-member .modal-btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.team-member .modal-btn:hover {
+    background: #555;
+}
+
+
+
+/* Stile per la sezione "Servizi" */
+#services {
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo simile alla sezione "Hero" */
+}
+
+#services h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff; /* Testo bianco */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    width: calc(33.33% - 40px); /* Larghezza di ogni servizio */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Sfondo bianco per ogni servizio */
+}
+
+.service h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333; /* Testo grigio scuro */
+}
+
+.service p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #777; /* Testo grigio */
+}
+
+.service .modal-btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.service .modal-btn:hover {
+    background: #555;
+}
